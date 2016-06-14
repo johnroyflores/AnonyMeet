@@ -3,6 +3,8 @@ $(document).ready(function(){
 
 console.log ("you are not here");
 
+console.log ("yes I am");
+
 // var map;
 // function initMap() {
 // 	// Constructor creates a new map - only center and zoom are required.
