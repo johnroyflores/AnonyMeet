@@ -1,7 +1,7 @@
 // Group Project LKM file
 $(document).ready(function(){
 
-console.log ("you are not here");
+console.log ("you are not not here");
 
 // var map;
 // function initMap() {
