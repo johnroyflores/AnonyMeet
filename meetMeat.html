@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>AnonyMeet</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AnonyMeet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-     <link rel="stylesheet" href="assets/css/pure-drawer.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/pure-drawer.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styleJohn.css">
     <script type="text/javascript" src="assets/app.js"></script>
-        
-       
-    </head>
-    <body>
-        <div class="pure-container" data-effect="pure-effect-slide">
-            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
-            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+</head>
 
-            <nav class="pure-drawer" data-position="left">
-                <p style="padding: 100px 20px; margin: 0;">   
+<body>
+    <div class="pure-container" data-effect="pure-effect-slide">
+        <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left" />
+        <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+        <nav class="pure-drawer" data-position="left">
+            <p style="padding: 100px 20px; margin: 0;">
                 <section id="sidebar" class="">
-        <button class="btn btn-danger" id="listBtn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        </button>
-        <div id="name">
-            <strong>Name goes here</strong>
-        </div>
-        <div id="location_image">
-        </div>
-        <div id="locationDescription">
-            <div id="locationimage">
-                <img src="http://placehold.it/260x260">
-            </div>
-            <div id="type">
-                <p><strong>Type:</strong></p>
-            </div>
-            <div id="vicinity"><strong>Vicinity:</strong> </div>
-        </div>
-    </section></p>
-            </nav>   
-            
-            <div class="pure-pusher-container">
-                <div class="pure-pusher">
-                    <div style="width: 1000px; height: 1800px; margin: 0px auto;" >
-            <div class=" header">        
-        <p>AnonyMeet</p>
-    </div><div id="map">
-    </div>
-    </div>
+                    <button class="btn btn-danger" id="listBtn"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </button>
+                    <div id="name">
+                        <strong>Name goes here</strong>
+                    </div>
+                    <div id="location_image">
+                    </div>
+                    <div id="locationDescription">
+                        <div id="locationimage">
+                            <img src="http://placehold.it/260x260">
+                        </div>
+                        <div id="type">
+                            <p><strong>Type:</strong></p>
+                        </div>
+                        <div id="vicinity"><strong>Vicinity:</strong> </div>
+                    </div>
+                </section>
+            </p>
+        </nav>
+        <div class="pure-pusher-container">
+            <div class="pure-pusher">
+                <div style="width: 1000px; height: 1000px; margin: 0px auto;">
+                    <div class=" header">
+                        <p>AnonyMeet</p>
+                    </div>
+                    <div id="map">
+                    </div>
                 </div>
             </div>
-            
-            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
         </div>
-    </body>
+        <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+    </div>
+</body>
+
 </html>
