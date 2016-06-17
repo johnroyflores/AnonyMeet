@@ -22,13 +22,32 @@
 
 
 <body>
+	<form  id="addressform" class="submitbox">
+        <input id="address" type="text" placeholder="address">
+        <br />
+        <input id="city" type="text" placeholder="city">
+        <br />
+        <input id="zip" type="text" placeholder="zip code">
+        <br />
+        <button id="start" type="submit">Submit</button>
+    </form>
+    <div id="statusDiv"></div>
 	<div class="container">
 		<div class="options-box">
-			<h1>Find Your New NYC Home</h1>
+			<!--<h1>POSSIBLE MEETING PLACES</h1>
 			<div>
-				<input id="show-listing" type="button" value="show listings">
-				<input id="hide-listing" type="button" value="hide listings">
-			</div>
+				<h3 id="yourLocDiv"></h3>
+			</div>-->
+			<table id="tableDiv">
+			<tr id="titles">
+				<td>NAME</td>
+				<td>ADDRESS</td>
+				<td>DISTANCE FROM YOU</td>
+				<td>TIME FOR YOU</td>
+				<td>DISTANCE FROM THEM</td>
+				<td>TIME FOR THEM</td>
+			</tr>
+			</table>
 		</div>
 	</div>
 		<div id='map'></div>
@@ -41,11 +60,19 @@
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
+<!-- GOOGLE MAP API CALL.  CHANGED FROM ASYNC DEFER TO
+A SYNCHRONOUS? CALL.
+FOR NOW, THE CALL INCLUDES THE FOLLOWING LIBRARIES: GEOMETRY, DRAWING AND PLACES 
 
+"it is possible to omit the async attribute and the call back parameter.  this will cause the loading of the API to block until the API is downloaded.  This will probably slow your page load.  but it means wyou can write subsequent script tags assuming that the API is already loaded"-->
 
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHLAzU1_hkV_IcuSPAhH61fqAi96I0V4c&v=3&callback=initMap">
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing,places&key=AIzaSyDHLAzU1_hkV_IcuSPAhH61fqAi96I0V4c&v=3&callback=initMap">
 	</script>
+
+<!-- 	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyDHLAzU1_hkV_IcuSPAhH61fqAi96I0V4c&v=3&callback=initMap">
+	</script> -->
 
 </body>
 </html>

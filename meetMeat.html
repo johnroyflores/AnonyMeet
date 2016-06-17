@@ -15,12 +15,20 @@
     <link rel="stylesheet" href="assets/css/pure-drawer.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styleJohn.css">
     <script type="text/javascript" src="assets/app.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 </head>
 
 <body>
+
+<!-- Here begins all of our container mumbo jumbo-->
     <div class="pure-container" data-effect="pure-effect-slide">
         <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left" />
+        <input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top" checked="true"/>
         <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+        <label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top"> <span class="pure-toggle-icon"></span> </label>
+
+        <!-- Stuff for the left drawer goes here-->
+
         <nav class="pure-drawer" data-position="left">
             <p style="padding: 100px 20px; margin: 0;">
                 <section id="sidebar" class="">
@@ -43,10 +51,28 @@
                 </section>
             </p>
         </nav>
-        <div class="pure-pusher-container">
+
+        <!-- Stuff for the top drawer goes here-->
+        <div class="pure-drawer" data-position="top"> <div class="">
+            <!--<h1>POSSIBLE MEETING PLACES</h1>
+            <div>
+                <h3 id="yourLocDiv"></h3>
+            </div>-->
+            <table id="tableDiv">
+            <tr id="titles">
+                <td>Name</td>
+                <td>Address</td>
+                <td>Distance</td>
+                <td>Travel Time</td>
+            </tr>
+            </table>
+        </div> </div>
+
+        <!--Here's all of the always visible content-->
+        <div class="pure-pusher-container body">
             <div class="pure-pusher">
-                <div style="width: 1000px; height: 1000px; margin: 0px auto;">
-                    <div class=" header">
+                <div style="width: 1000px; height: 100%; margin: 0px auto;">
+                    <div class=" header2">
                         <p>AnonyMeet</p>
                     </div>
                     <div id="map">
@@ -55,7 +81,21 @@
             </div>
         </div>
         <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+         <label class="pure-overlay" for="pure-toggle-top" data-overlay="top"></label>
     </div>
+
+    <!-- Here's the footer -->
+    <footer class="site-footer">
+        <small>&copy; Copyright 2016</small>
+    </footer>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- GOOGLE MAP API CALL.  CHANGED FROM ASYNC DEFER TO
+A SYNCHRONOUS? CALL.
+FOR NOW, THE CALL INCLUDES THE FOLLOWING LIBRARIES: GEOMETRY, DRAWING AND PLACES 
+
+"it is possible to omit the async attribute and the call back parameter.  this will cause the loading of the API to block until the API is downloaded.  This will probably slow your page load.  but it means wyou can write subsequent script tags assuming that the API is already loaded"-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing,places&key=AIzaSyDHLAzU1_hkV_IcuSPAhH61fqAi96I0V4c&v=3&callback=initMap">
+    </script>
 </body>
 
 </html>
